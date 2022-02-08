@@ -4,19 +4,18 @@
     // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    
         {
-            "name": "(gdb) 起動",
+            "name": "g++.exe - アクティブ ファイルのビルドとデバッグ",
             "type": "cppdbg",
             "request": "launch",
-            "program": "プログラム名を入力してください (例: ${workspaceFolder}/a.exe)",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "/path/to/gdb",
+            "miDebuggerPath": "C:\\gcc\\x86_64-8.1.0-release-posix-sjlj-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "gdb の再フォーマットを有効にする",
@@ -28,7 +27,8 @@
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "C/C++: g++.exe アクティブなファイルのビルド"
         }
     ]
 }
